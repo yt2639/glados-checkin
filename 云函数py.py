@@ -1,11 +1,11 @@
-import requests, time, re, json, base64, argparse
+import requests, time, re, json, base64, argparse, os
 
 # server酱开关，填0不开启(默认)，填2同时开启cookie失效通知和签到成功通知
 sever = '2'
 # 填写server酱sckey,不开启server酱则不用填（自己更改）
-sckey = ''
+sckey = os.environ["SCKEY"]
 # 填入glados账号对应cookie
-cookie = ''
+cookie = os.environ["COOKIE"]
 referer = 'https://glados.rocks/console/checkin'
 
 def start():
