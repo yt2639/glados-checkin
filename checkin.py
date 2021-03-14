@@ -35,8 +35,9 @@ def start():
             requests.get('https://sc.ftqq.com/' + sckey + '.send?text='+mess+'，you have '+time+' days left')
     else:
         requests.get('https://sc.ftqq.com/' + sckey + '.send?text=cookie过期')
-    # 试试能不能行
-    requests.get('https://sc.ftqq.com/' + sckey + '.send?text=testtest哈哈哈哈')
+
+#     # 试试能不能行（2021.3.14，收到啦！）
+#     requests.get('https://sc.ftqq.com/' + sckey + '.send?text=testtest哈哈哈哈')
 def main_handler(event, context):
   return start()
 
